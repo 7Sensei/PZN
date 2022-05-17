@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScipt Dasar</title>
+</head>
+<body>
+    <script>
+
+        // String Template 
+        
+        const name = 'Rafi'
+        const lastName = 'Abadi'
+        const template = `${name} ${lastName}`
+
+        console.info(template)
+
+        // With Expression
+        const nilai = 80
+        const lulus = `${template} | lulus : ${nilai > 75}`
+
+        console.info(lulus)
+
+        // Multiline
+        const kalimat = `
+        Nama saya Rafi
+        Umur 21
+        Tinggal di pati
+        `
+        document.writeln("<pre>")
+        document.writeln(kalimat)
+        document.writeln("</pre>")
+        
+    </script>
+</body>
+</html>
