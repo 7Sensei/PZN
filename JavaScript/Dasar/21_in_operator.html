@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Dasar</title>
+</head>
+<body>
+    <script>
+
+
+        // in operator
+        
+        const person = {
+            nama: "Rafi Abadi",
+            anonymous: undefined,
+            umnur: "21"
+        }
+
+        if("nama" in person) {
+            alert(`Hello ${person.nama}`)
+        } else {
+            alert(`Hello`)
+        }
+
+        /*
+            WARNING
+            in operator hanya mengecek apakah ada di data dilama array atau object
+            walaupun itu nilainya undifined dan null 
+        */ 
+
+        if("anonymous" in person) {
+            alert(`Hello ${person.anonymous}`)
+        } else {
+            alert(`Hello`)
+        }
+            
+    </script>
+</body>
+</html>
