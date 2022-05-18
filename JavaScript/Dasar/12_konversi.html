@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Dasar</title>
+</head>
+<body>
+    <script>
+
+        const satu = 1
+        const dua = '1'
+        parseInt(dua)
+        hasil = satu + dua
+        document.writeln(`hasil : ${hasil}`)
+
+        // Konversi
+
+        document.writeln(`<p>${parseInt(1.5)}</p>`)
+        document.writeln(`<p>${parseFloat("1.5")}</p>`)
+        document.writeln(`<p>${Number(1.5)}</p>`)
+        
+        // tostring
+        
+        const total = satu.toString() + dua
+        document.writeln(total)
+
+        // NaN
+
+        document.writeln(`<p>${parseInt("1.5salah")}</p>`)
+        document.writeln(`<p>${parseFloat("a1.5")}</p>`)
+        document.writeln(`<p>${Number("1.5wl")}</p>`)
+
+        //isNaN
+
+        const nan = "a10"
+        document.writeln(isNaN(nan))
+
+    </script>
+</body>
+</html>

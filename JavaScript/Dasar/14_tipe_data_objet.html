@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Dasar</title>
+</head>
+<body>
+    <script>
+
+        const nama = {
+            Id: 19103041019,
+            "Nama Lengkap": "Rafi Abadi",
+            kelas: "TI A1",
+            umur: 21
+        }
+
+        console.info(`ID : ${nama.Id}`)
+        console.info(`Nama : ${nama["Nama Lengkap"]}`)
+        console.info(`Kelas : ${nama.kelas}`)
+        console.info(`Umur : ${nama.umur}`)
+
+        console.table(nama)
+        
+        delete nama.umur
+        console.table(nama)
+        
+    </script>
+</body>
+</html>

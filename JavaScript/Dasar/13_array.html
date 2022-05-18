@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Dasar</title>
+</head>
+<body>
+    <script>
+
+        // array
+        
+        let arrayKosong = []
+
+        let arrayNama = ["Rafi", "Abadi"]
+
+        console.table(arrayKosong)
+        console.table(arrayNama)
+        
+        // add data
+        
+        arrayNama.push("Saitama", "Genos")
+        console.table(arrayNama)
+        
+        // mengubah data dari index ke
+        
+        arrayNama[2] = "Rudi"
+        console.table(arrayNama)
+
+        // panjang sari sebuah array
+        
+        document.writeln(`Panjang array : ${arrayNama.length} </br>`)
+        
+        // mengambil data dari index
+        
+        document.writeln(arrayNama[3])
+        
+        // delete data
+        
+        delete arrayNama[2]
+        console.table(arrayNama)
+        
+        // boleh memasukkan data apapun
+        
+        arrayNama.push(1,2,3)
+        arrayNama.push(["Genjutsu", "sharinggan", "Rinnegan"])
+        console.table(arrayNama)
+
+        
+    </script>
+</body>
+</html>
