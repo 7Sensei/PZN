@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript Dasar</title>
+</head>
+
+<body>
+    <script>
+        // for in
+
+        const person = {
+            nama: "Rafi Abadi",
+            umur: 21,
+            tempat: "Pati"
+        }
+
+        for (let property in person) {
+            document.writeln(`Property ${property} : ${person[property]}</br>`)
+        }
+
+        // for in object
+        document.writeln("<br>")
+
+        const data = ['nama', 'umur', 'alamat']
+
+        for (let datas in data) {
+            document.writeln(`${datas} : ${data[datas]}</br>`)
+        }
+    </script>
+</body>
+
+</html>
