@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Dasar</title>
+</head>
+
+<body>
+    <script>
+        // rest parameter
+
+        function person(nama, ...nilai) {
+            let count = 0
+            for (items of nilai) {
+                count += items
+            }
+            document.writeln(`Uang ${nama} bernilai ${count}<br>`)
+        }
+
+        person("Budi", 10, 35, 6, 4, 5, 67)
+        person("Arkhan", 9, 35, 6, 54, 3, 67)
+        person("Saitama", 10, 3, 6, 56, 5, 67)
+
+        // spread syntax
+
+        const larik = [10, 10, 10, 10, 10]
+        person("genos", ...larik);
+
+        // argument object (deprecated)
+
+        function data() {
+            let nilai = 0
+            for (item of arguments /*argument*/ ) {
+                nilai += item
+            }
+            document.writeln(`Nilai : ${nilai}`)
+        }
+
+        data(1, 2, 5, 75, 34, 10)
+    </script>
+</body>
+
+</html>

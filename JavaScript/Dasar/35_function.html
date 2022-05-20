@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Dasar</title>
+</head>
+
+<body>
+    <script>
+        // Function
+
+        function person() {
+            document.writeln("Ini Function<br>")
+        }
+
+        // Function with property
+
+        function pondok(nama, tempat) {
+            document.writeln(`Nama : ${nama}, Tempat : ${tempat}<br>`)
+        }
+
+        // Function with return
+
+        function result(nilai, hasil) {
+            return `Nilai : ${nilai}, Hasil : ${hasil}<br>`
+        }
+
+        // Function dengan banyaknya return
+
+        function beji(value) {
+            if (value >= 80) {
+                return "Very Good"
+            } else if (value >= 70) {
+                return "Good"
+            } else if (value >= 60) {
+                return "Cukup"
+            } else {
+                return "Tidak Ada"
+            }
+        }
+
+        // mengghentikan return
+
+        function kampus(array, searchArray) {
+            for (elemet of array) {
+                if (elemet === searchArray) {
+                    return true
+                }
+            }
+            return false
+        }
+
+        person()
+        pondok(nama = "Rafi Abadi", tempat = "Magang")
+
+        let hasil = result(90, "Good")
+        document.writeln(`hasil<br>`)
+
+        let bejine = beji(value = 90)
+        document.writeln(bejine)
+
+        document.writeln("<br>")
+
+        let y = kampus([4, 1, 345, 546, 7542, 35, 657, 86, ], 86)
+        document.writeln(y)
+    </script>
+</body>
+
+</html>
