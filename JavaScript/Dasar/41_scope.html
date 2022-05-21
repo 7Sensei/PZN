@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javaScript Dasar</title>
+</head>
+
+<body>
+
+    <script>
+        // global scope
+
+        let nilai = 0
+
+        function result() { // local scope
+            nilai++
+            console.info(nilai) // bisa di akses
+        }
+
+        result()
+
+        // Nestes function
+
+        function kucing() {
+            let warna = "putih"
+
+            function kaki() {
+                console.info(warna)
+            }
+
+            kaki()
+        }
+
+        kucing()
+
+        function satu() {
+            let j = 0
+        }
+
+        function dua() {
+            let i = 0
+            console.info(j) // Error ndak bisa di akses
+        }
+
+        dua()
+        console.info(i) // Error ndak bisa di akses
+    </script>
+
+</body>
+
+</html>

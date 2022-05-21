@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Dasar</title>
+</head>
+
+<body>
+    <script>
+        // anonymous function
+
+        let nama = function (nama) {
+            document.writeln(`Nama : ${nama}<br>`)
+        }
+
+        nama("Ekko")
+        nama("Diana")
+
+        function lama(callback) {
+            callback("Ekko")
+        }
+
+        lama(nama)
+
+        lama(function (name) {
+            document.writeln(`HI ${name} <br>`)
+        })
+
+        lama(function (name) {
+            document.writeln(`HI ${name} <br>`)
+        })
+
+        lama(function (name) {
+            document.writeln(`HI ${name} <br>`)
+        })
+
+        lama(function (name) {
+            document.writeln(`HI ${name} <br>`)
+        })
+    </script>
+</body>
+
+</html>
