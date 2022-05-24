@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javaScript Dasar</title>
+</head>
+
+<body>
+    <script>
+        // key this in javasript
+
+        console.info(this)
+
+        function outter() {
+            console.info(this)
+
+            function inner() {
+                console.info(this)
+            }
+
+            inner()
+        }
+
+        outter()
+
+        const person = {
+            nama: "Saitama",
+            sayHello: function (name) {
+                console.info(`Hi ${name} ini adalah ${this.nama}`)
+            }
+        }
+
+        person.sayHello("Tatsumki")
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javaScript Dasar</title>
+</head>
+
+<body>
+
+    <script>
+        // function generator
+
+        function* data() {
+            yield "nama"
+            yield "umur"
+            yield "alamat"
+        }
+
+        let description = data()
+        for (datas of description) {
+            console.info(datas)
+        }
+
+        // function genrator komplek
+        // lazy
+
+        function* buatGanjil(value) {
+            for (let i = 1; i <= value; i++) {
+                if (i % 2 === 1) {
+                    console.info(`Yeild ${i}`)
+                    yield i
+                }
+            }
+        }
+
+        // eager
+
+        function buatGanjilArray(value) {
+            const papa = []
+            for (let i = 1; i <= value; i++) {
+                if (i % 2 === 1) {
+                    console.info(`Yeild ${i}`)
+                    papa.push(i)
+                }
+            }
+            return papa;
+        }
+
+
+        const hasil = buatGanjilArray(100)
+        //for (const result of hasil) {
+        //    console.info(result)
+        //}
+
+        console.info(hasil.next().value)
+        console.info(hasil.next().value)
+        console.info(hasil.next().value)
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Dasar</title>
+</head>
+
+<body>
+    <script>
+        // arrow function menggunakan bracket
+
+        let nama = (name) => {
+            console.info(`Nama : ${name}`)
+        }
+
+        nama("eko")
+
+        // arrow function tanpa menggunakan bracket
+
+        let nilai = (value) => console.info(`Nilai : ${value}`)
+        nilai(10)
+
+        // sudah bisa di return
+
+        let hasil = (satu, dua) => satu + dua
+        console.info(hasil(20, 20))
+
+        // tanpa () tapi harus satu parameter
+
+        let word = value => console.info(`Band : ${value}`)
+        word('Paramore')
+
+        // arraow function sebagai parameter
+        // menggunakan anonymous
+
+        function random(callback) {
+            callback("Pudidi")
+        }
+
+        random(function (name) {
+            console.info(`Nama : ${name}`)
+        })
+
+        // menggunkan arrouw fundtion
+
+        random(name => console.info(`My Name Is : ${name}`))
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javaScript Dasar</title>
+</head>
+
+<body>
+    <script>
+        // this in arrraw function
+
+        const person = {
+            nama: "Saitama",
+            sayHello: (name) => {
+                console.info(this)
+                console.info(`Hi ${name}`)
+            }
+        }
+
+        person.sayHello("Genos")
+    </script>
+</body>
+
+</html>
