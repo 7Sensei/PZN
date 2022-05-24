@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Dasar</title>
+</head>
+
+<body>
+    <script>
+        const person = {
+            nama: "Rudi",
+            nim: 19103041019,
+            get fullname() {
+                console.info(`Nama : ${this.nama} NIM : ${this.nim}`)
+            },
+
+            set fullname(value) {
+                const array = value.split(" ")
+                this.nama = array[0]
+                this.nim = array[1]
+            }
+
+        }
+
+        person.fullname
+        person.fullname = "Saitama Tatsumaki"
+        console.table(person)
+
+        person.fullname = "Uchiha Sasori"
+        console.table(person)
+
+        person.fullname = "Uzumaki Tachibana"
+        console.table(person)
+    </script>
+</body>
+
+</html>
