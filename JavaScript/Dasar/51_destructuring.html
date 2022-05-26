@@ -12,14 +12,170 @@
     <script>
         // Destructuring
 
-        const data = [19, 10, 305, 94, 2038, 2305, 0454]
-        const [nama, umur, alamat, desa, ...lain] = data
+        {
+            const data = [19, 10, 305, 94, 2038, 2305, 0454]
+            const [nama, umur, alamat, desa, ...lain] = data
 
-        console.info(nama)
-        console.info(umur)
-        console.info(alamat)
-        console.info(desa)
-        console.info(lain)
+            console.info(nama)
+            console.info(umur)
+            console.info(alamat)
+            console.info(desa)
+            console.info(lain)
+        }
+
+        {
+            const person = {
+                nama: "Saitama",
+                tgl: "Jpn",
+                power: "one punch",
+                data: {
+                    id: 90,
+                    card: "premium",
+                    number: 1
+                },
+                outher: "murata",
+                chapter: 167
+            }
+
+
+            const {
+                nama,
+                tgl,
+                power,
+                data,
+                ...lain
+            } = person
+
+            console.info(nama)
+            console.info(tgl)
+            console.info(power)
+            console.info(data)
+            console.info(lain)
+        }
+
+        // destruction nested
+
+        {
+            const person = {
+                nama: "Saitama",
+                tgl: "Jpn",
+                power: "one punch",
+                data: {
+                    id: 90,
+                    card: "premium",
+                    number: 1
+                },
+                outher: "murata",
+                chapter: 167
+            }
+
+            const {
+                nama,
+                tgl,
+                power,
+                data: {
+                    card,
+                    number,
+                    id
+                },
+                ...lain
+            } = person
+
+            console.info(nama)
+            console.info(tgl)
+            console.info(power)
+            console.info(card)
+            console.info(number)
+            console.info(id)
+            console.info(lain)
+        }
+
+        // Destruction di funcion parameter
+
+        {
+            function kopi({
+                kopi,
+                gula,
+                cangkir
+            }) {
+                console.info(kopi)
+                console.info(gula)
+                console.info(cangkir)
+            }
+
+            const kopis = {
+                kopi: "lelet",
+                gula: "manis",
+                cangkir: "Cangkir Kopi",
+            }
+
+            kopi(kopis)
+        }
+
+        // Destructuring di dalam array
+
+        {
+            function sum([first, second]) {
+                return first + second
+            }
+
+            console.info(sum([5, 5]))
+            console.info(sum([20, 20]))
+
+        }
+
+        // Default value
+        // Array
+
+        {
+            const warna = ["red", "blue", "green"]
+            const [satu, dua, tiga = "blue-mate", empat = "purple"] = warna
+
+            console.info(satu)
+            console.info(dua)
+            console.info(tiga)
+            console.info(empat)
+        }
+
+        // Object
+
+        {
+            const nama = {
+                firstName: "Saitama",
+                lastName: "Ndanyoda",
+            }
+
+            const {
+                firstName,
+                middleName = "Ahmad",
+                lastName
+            } = nama
+
+            console.info(firstName)
+            console.info(middleName)
+            console.info(lastName)
+
+        }
+
+        // Menggunakan variable lain
+
+        {
+            const nama = {
+                firstName: "Saitama",
+                lastName: "Ndanyoda",
+            }
+
+            const {
+                firstName: namaDepan, //ganti variable
+                middleName: namaTengah = "Ahmad", //ganti variable
+                lastName: namaTerakhir //ganti variable
+            } = nama
+
+            console.info(namaDepan)
+            console.info(namaTengah)
+            console.info(namaTerakhir)
+
+        }
     </script>
 </body>
 
